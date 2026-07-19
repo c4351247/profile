@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@_6ngt - الصفحة الشخصية</title>
-    <!-- الخطوط -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
-    <!-- الأيقونات -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -20,6 +18,20 @@
             color: white;
             padding: 20px;
         }
+
+        /* ===== كود الخلفية ===== */
+        #bg-video {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1;
+            object-fit: cover;
+            opacity: 0.6;
+        }
+        /* ===================== */
+
         .card {
             max-width: 500px;
             width: 100%;
@@ -47,12 +59,12 @@
             color: #6a5acd;
             overflow: hidden;
         }
-.profile-img img {
-    width: 150%;
-    height: 150%;
-    object-fit: cover;
-    margin-top: 12%; /* ينزل الصورة للأسفل */
-}
+        .profile-img img {
+            width: 150%;
+            height: 150%;
+            object-fit: cover;
+            margin-top: 12%;
+        }
         h1 { font-size: 28px; font-weight: 900; margin-bottom: 5px; }
         .bio { color: #aaa; margin-bottom: 20px; font-size: 16px; }
         .stats { display: flex; justify-content: center; gap: 30px; margin: 20px 0; }
@@ -98,30 +110,27 @@
 </head>
 <body>
 
+<!-- ===== فيديو الخلفية ===== -->
+<video autoplay muted loop id="bg-video">
+    <source src="video.mp4" type="video/mp4">
+</video>
+<!-- ========================= -->
+
 <div class="card">
-    <!-- الصورة الشخصية -->
     <div class="profile-img">
-    <img src="profile.jpg" alt="صورتي الشخصية">
-        <!-- أو استخدم الصورة: <img src="your-photo.jpg" alt="profile"> -->
+        <img src="profile.jpg" alt="صورتي الشخصية">
     </div>
 
-    <!-- الاسم والوصف -->
     <h1>bariq</h1>
-    <div class="bio">
-    _6ngt
-        
-    </div>
+    <div class="bio">_6ngt</div>
 
-    <!-- الإحصائيات -->
     <div class="stats">
         <span><i class="fas fa-heart"></i> 100</span>
         <span><i class="fas fa-users"></i> 85</span>
         <span><i class="fas fa-music"></i> 0:00</span>
     </div>
 
-    <!-- الأزرار (الروابط) -->
     <div class="links">
-        </a>
         <a href="https://instagram.com/_6ngt" class="link-btn" target="_blank">
             <i class="fab fa-instagram"></i> إنستغرام
         </a>
@@ -130,14 +139,12 @@
         </a>
     </div>
 
-    <!-- مشغل الموسيقى (اختياري) -->
     <div class="music-player">
         <iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/XXXXX&color=%236a5acd&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" allow="autoplay"></iframe>
-        <!-- استبدل XXXXX بمعرف الأغنية من SoundCloud -->
     </div>
 
     <div class="footer">
-        صنع بـ ❤️ بواسطة <a href="#">@memate</a>
+        صنع بـ ❤️ بواسطة <a href="#">@_6ngt</a>
     </div>
 </div>
 
