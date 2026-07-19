@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@memate - الصفحة الشخصية</title>
+    <!-- الخطوط -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- الأيقونات -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Cairo', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: white;
+            padding: 20px;
+        }
+        .card {
+            max-width: 500px;
+            width: 100%;
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(15px);
+            border-radius: 30px;
+            padding: 40px 30px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+            border: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+            transition: all 0.3s;
+        }
+        .card:hover { transform: scale(1.02); }
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: #302b63;
+            margin: 0 auto 20px;
+            border: 3px solid #6a5acd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 60px;
+            color: #6a5acd;
+            overflow: hidden;
+        }
+        .profile-img img { width: 100%; height: 100%; object-fit: cover; }
+        h1 { font-size: 28px; font-weight: 900; margin-bottom: 5px; }
+        .bio { color: #aaa; margin-bottom: 20px; font-size: 16px; }
+        .stats { display: flex; justify-content: center; gap: 30px; margin: 20px 0; }
+        .stats span { font-size: 14px; color: #aaa; }
+        .stats span i { color: #6a5acd; margin-right: 5px; }
+        .links { display: flex; flex-direction: column; gap: 12px; margin: 25px 0; }
+        .link-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 14px;
+            border-radius: 50px;
+            background: rgba(255,255,255,0.08);
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+        .link-btn:hover {
+            background: #6a5acd;
+            transform: scale(1.03);
+            box-shadow: 0 8px 25px rgba(106, 90, 205, 0.4);
+        }
+        .link-btn i { font-size: 20px; width: 30px; text-align: center; }
+        .music-player {
+            margin-top: 20px;
+            padding: 12px;
+            border-radius: 50px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .music-player iframe {
+            width: 100%;
+            border-radius: 20px;
+            border: none;
+        }
+        .footer { margin-top: 25px; font-size: 12px; color: #555; }
+        .footer a { color: #6a5acd; text-decoration: none; }
+        @media (max-width: 480px) { .card { padding: 30px 20px; } }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <!-- الصورة الشخصية -->
+    <div class="profile-img">
+        <i class="fas fa-user"></i>
+        <!-- أو استخدم الصورة: <img src="your-photo.jpg" alt="profile"> -->
+    </div>
+
+    <!-- الاسم والوصف -->
+    <h1>memate</h1>
+    <div class="bio">
+        الحيوان بقتلك لانو جيعان<br>بس الانسان بقتلك وهو شبعان 🇵🇸
+    </div>
+
+    <!-- الإحصائيات -->
+    <div class="stats">
+        <span><i class="fas fa-heart"></i> 100</span>
+        <span><i class="fas fa-users"></i> 85</span>
+        <span><i class="fas fa-music"></i> 0:00</span>
+    </div>
+
+    <!-- الأزرار (الروابط) -->
+    <div class="links">
+        <a href="https://twitter.com/yourusername" class="link-btn" target="_blank">
+            <i class="fab fa-twitter"></i> تويتر
+        </a>
+        <a href="https://instagram.com/yourusername" class="link-btn" target="_blank">
+            <i class="fab fa-instagram"></i> إنستغرام
+        </a>
+        <a href="https://t.me/yourusername" class="link-btn" target="_blank">
+            <i class="fab fa-telegram"></i> تيليجرام
+        </a>
+        <a href="https://youtube.com/yourusername" class="link-btn" target="_blank">
+            <i class="fab fa-youtube"></i> يوتيوب
+        </a>
+    </div>
+
+    <!-- مشغل الموسيقى (اختياري) -->
+    <div class="music-player">
+        <iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/XXXXX&color=%236a5acd&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" allow="autoplay"></iframe>
+        <!-- استبدل XXXXX بمعرف الأغنية من SoundCloud -->
+    </div>
+
+    <div class="footer">
+        صنع بـ ❤️ بواسطة <a href="#">@memate</a>
+    </div>
+</div>
+
+</body>
+</html>
