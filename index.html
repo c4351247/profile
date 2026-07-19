@@ -47,7 +47,13 @@
             color: #6a5acd;
             overflow: hidden;
         }
-        .profile-img img { width: 100%; height: 100%; object-fit: cover; }
+        .profile-img img {
+    width: 140%;
+    height: 140%;
+    object-fit: cover;
+    margin-top: -20%;  /* يرفع الصورة لأعلى */
+    margin-left: -20%; /* يوسع الصورة قليلاً (اختياري) */
+}
         h1 { font-size: 28px; font-weight: 900; margin-bottom: 5px; }
         .bio { color: #aaa; margin-bottom: 20px; font-size: 16px; }
         .stats { display: flex; justify-content: center; gap: 30px; margin: 20px 0; }
